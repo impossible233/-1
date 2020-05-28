@@ -1,0 +1,18 @@
+
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.util.Vector;
+import javax.swing.*;
+public class MyPanel extends JPanel implements KeyListener,Runnable{
+	Hero hero = null;
+	Vector<EnemyTank> ets = new Vector<EnemyTank>();
+	int enSize = 2;
+	Vector<Bomb> bombs = new Vector<Bomb>();
+	Image image1 = null;
+	Image image2 = null;
+	Image image3 = null;
+	Image imagebg = null;
+}
+
+
