@@ -1,0 +1,43 @@
+public MyPanel(){
+				hero = new Hero(200,200);
+			for(int i = 0;i<enSize;i++){
+			EnemyTank et = new EnemyTank((i+1)*50,0);
+					et.setColor(1);
+					et.setDirect(2);
+					Thread t = new Thread(et);
+			t.start();
+					Shot s = new Shot(et.x+10,et.y+30,2);
+			et.ss.add(s);
+			Thread t2 = new Thread(s);
+			t2.start();
+					ets.add(et);
+		}
+				image1 = Toolkit.getDefaultToolkit().getImage(Panel.class.getResource("/bom.png"));
+		image2 = Toolkit.getDefaultToolkit().getImage(Panel.class.getResource("/bom.png"));
+		image3 = Toolkit.getDefaultToolkit().getImage(Panel.class.getResource("/bom.png"));
+			imagebg =Toolkit.getDefaultToolkit().getImage(Panel.class.getResource("/bg.jpg"));
+	}
+
+
+部分代码：
+public void drawTank(int x,int y,Graphics g,int direct,int type){
+			switch(type){
+		case 0:
+			g.setColor(Color.RED);//我的坦克
+			break;
+		case 1:
+			g.setColor(Color.blue);//敌军坦克
+			break;
+		}
+		switch(direct){
+		case 0:
+			g.fill3DRect(x, y, 5, 30,false);						g.fill3DRect(x+15, y, 5, 30,false);
+			g.fill3DRect(x+5, y+5, 10, 20,false);
+			g.fillOval(x+5, y+9, 10, 10);
+			g.drawLine(x+10, y+15, x+10, y);			break;
+		case 1:
+			g.fill3DRect(x, y, 30, 5,false);
+			g.fill3DRect(x, y+15,30, 5,false);
+			g.fill3DRect(x+5, y+5, 20, 10,false);
+			g.fillOval(x+9, y+5, 10, 10);
+			g.drawLine(x+15, y+10, x+30, y+10);			break;
