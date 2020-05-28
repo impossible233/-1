@@ -1,0 +1,78 @@
+public void newWall() {
+if(this.level==1){
+w1 = new Wall(210, 200, 100, 30, this);
+w2 = new Wall(210, 200, 30, 190, this);
+w3 = new Wall(280, 200, 30, 190, this);
+w4 = new Wall(210, 370, 100, 30, this);
+w5 = new Wall(440, 200, 100, 30, this);
+w6 = new Wall(440, 200, 30, 95, this);
+w7 = new Wall(470, 265, 70, 30, this);
+w8 = new Wall(510, 200, 30, 190, this);
+w9 = new Wall(440, 370, 100, 30, this);
+w10 = new Wall(379, 530, 43, 20, this);
+w11 = new Wall(280, 530, 30, 70, this);
+w12 = new Wall(510, 530, 30, 70, this);
+walls.add(w1);
+walls.add(w2);
+walls.add(w3);
+walls.add(w4);
+walls.add(w5);
+walls.add(w6);
+walls.add(w7);
+walls.add(w8);
+walls.add(w9);
+walls.add(w10);
+walls.add(w11);
+walls.add(w12);
+}
+else if(this.level==2){
+w1 = new Wall(210, 200, 100, 30, this);
+w2 = new Wall(210, 200, 30, 190, this);
+w3 = new Wall(280, 200, 30, 190, this);
+w4 = new Wall(210, 370, 100, 30, this);
+ w5 = new Wall(410, 200, 30, 70, this);
+w6 = new Wall(410, 200, 90, 30, this);
+w7 = new Wall(470, 200, 30, 190, this);
+w8 = new Wall(470, 370, 90, 30, this);
+w9 = new Wall(530, 320, 30, 65, this); 
+w10 = new Wall(379, 530, 43, 20, this)
+w11 = new Wall(280, 530, 30, 70, this);
+w12 = new Wall(510, 530, 30, 70, this);
+walls.add(w1);
+walls.add(w2);
+walls.add(w3);
+walls.add(w4);
+walls.add(w5);
+walls.add(w6);
+walls.add(w7);
+walls.add(w8);
+walls.add(w9);
+walls.add(w10);
+walls.add(w11);
+walls.add(w12);
+}
+else if(this.level>=3){
+w1 = new Wall(210, 200, 100, 30, this);
+w2 = new Wall(210, 200, 30, 190, this);
+w3 = new Wall(280, 200, 30, 190, this);
+w4 = new Wall(210, 370, 100, 30, this);
+ w5 = new Wall(430, 200, 90, 30, this);
+w6 = new Wall(430, 285, 90, 30, this);
+w7 = new Wall(430, 370, 90, 30, this);
+w8 = new Wall(500, 200, 30, 200, this);
+ w10 = new Wall(379, 530, 43, 20, this);
+w11 = new Wall(280, 530, 30, 70, this);
+w12 = new Wall(510, 530, 30, 70, this);
+walls.add(w1);
+walls.add(w2);
+walls.add(w3);
+walls.add(w4);
+walls.add(w5);
+walls.add(w6);
+walls.add(w7);
+walls.add(w8);
+ walls.add(w10);
+walls.add(w11);
+walls.add(w12);
+}
+}
