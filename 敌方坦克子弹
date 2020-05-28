@@ -1,0 +1,32 @@
+public void run() {
+		//敌方坦克的子弹
+		while(true){
+			//线程休眠50毫秒，每隔50毫秒子弹坐标修改一次
+			try {
+				Thread.sleep(50);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			switch(direct){
+			case 0 ://向上飞
+				y=y-speed;
+				break;
+			case 1 ://向右飞
+				x = x+speed;
+				break;
+			case 2 :///向下飞
+				y = y+speed;
+				break;
+			case 3 ://向左飞
+				x = x - speed;
+				break;
+			}
+			//子弹是否处境
+			if(x<0||x>400||y<0||y>300){
+				this.isLive = false;
+				break;
+			}
+		}
+	}
+
+}
