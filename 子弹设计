@@ -1,0 +1,11 @@
+public class Shot implements Runnable{
+    int x;
+    int y;
+    int direct;
+    int speed = 6;
+    boolean isLive = true;
+    public Shot(int x,int y,int direct){
+        this.x=x;
+        this.y=y;
+        this.direct = direct;
+    }
