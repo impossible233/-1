@@ -1,0 +1,69 @@
+public void run() {
+		//敌方坦克走向
+		while(true){
+			try {
+				Thread.sleep(50);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			switch (this.direct){
+			case 0:
+				for(int i = 0 ;i <30;i++){
+					if(y>0)
+					y= y-speed;
+					try {
+						Thread.sleep(50);
+					} catch (Exception e) {
+						// TODO: handle exception
+					}
+				}
+				
+				
+				break;
+			case 1:
+				for(int i = 0 ;i <30;i++){
+					if(x<370)
+					x= x+speed;
+					try {
+						Thread.sleep(50);
+					} catch (Exception e) {
+						// TODO: handle exception
+					}
+				}
+				break;
+			case 2:
+				for(int i = 0 ;i <30;i++){
+					if(y<270)
+					y= y+speed;
+					try {
+						Thread.sleep(50);
+					} catch (Exception e) {
+						// TODO: handle exception
+					}
+				}
+				break;
+			case 3:
+				for(int i = 0 ;i <30;i++){
+					if(x>0)
+					x= x-speed;
+					try {
+						Thread.sleep(50);
+					} catch (Exception e) {
+						// TODO: handle exception
+					}
+				}
+				break;
+			}
+			//随机产生方向
+			Random random = new Random();
+			this.direct = random.nextInt(4);
+			//判断是否死亡
+			if(this.isLive == false){
+				break;
+			}
+			
+		}
+	}
+
+}
+
