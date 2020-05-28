@@ -1,0 +1,19 @@
+
+import javax.swing.*;
+public class TankGame extends JFrame {
+	MyPanel mp = null;
+	public static void main(String[] args) {
+			TankGame tankegame = new TankGame();
+	}
+	public TankGame(){
+			mp = new MyPanel();
+			this.add(mp);
+		this.addKeyListener(mp);
+			Thread t = new Thread(mp);
+		t.start();
+				this.setSize(400,300);
+				this.setIconImage(new ImageIcon("image/tk.png").getImage());
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+}
